@@ -10,7 +10,7 @@ function About () {
         <div className="about-container">
             <div className="about-content-container">
                 <h1>A primeira <strong>Startup LegalTech</strong> que combina jurimetria com consultoria tributária. </h1>
-                <a>Com mais de 20 anos de experiência em consultoria tributária, nossa equipe desenvolveu uma ferramenta que automatiza o acompanhamento dos processos e que auxilia na tomada de decisão, afim de aumentar a acertividade e trazendo celeridade processual. </a>
+                <h3>Com mais de 20 anos de experiência em consultoria tributária, nossa equipe desenvolveu uma ferramenta que automatiza o acompanhamento dos processos e que auxilia na tomada de decisão, afim de aumentar a acertividade e trazendo celeridade processual. </h3>
                 <div className="media">
                     <IconActivity/>
                     <IconCheck />

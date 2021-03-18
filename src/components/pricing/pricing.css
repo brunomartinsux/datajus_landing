@@ -36,7 +36,7 @@
 
 }
 
-.pricing-header a{
+.pricing-header h3{
     font-size:18px;
     line-height:30px;
     font-weight:bold;
@@ -52,7 +52,7 @@
     padding-top:12%;
 }
 
-.plans a{
+.plans h3{
     color: rgb(27, 27, 27);
     font-weight: 480;
 }
@@ -68,7 +68,7 @@
     padding-top:5%;
 }
 
-.row a{
+.row h3{
     color: rgba(27, 27, 27, 0.719);
     font-size: 20px;
     padding-left:2%;

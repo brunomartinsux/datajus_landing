@@ -25,7 +25,7 @@ function Banner () {
             </div>
             <div class="banner-container">
                 <h1 class="banner-title">Lorem ipsum dolor sit amet, consectetur adipiscing. </h1>
-                <a class="banner-subtitle">Consultores especializados somados a inteligência artificial e atendimento personalizado.</a>
+                <h3 class="banner-subtitle">Consultores especializados somados a inteligência artificial e atendimento personalizado.</h3>
                 <div class="banner-footer">
                     <button class="saiba-mais-btn">Saiba Mais</button>
                     <button class="precos-btn">Ver preços</button>

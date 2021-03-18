@@ -9,23 +9,23 @@ function Pricing() {
              <h1>Preços</h1>
             <div className="pricing-content-container">
                 <div className="pricing-header">
-                    <a>ATÉ 30% DE DESCONTO!</a>
+                    <h3>ATÉ 30% DE DESCONTO!</h3>
                 </div>
                 <div className="plans">
                     <h1>Plano Mensal</h1>
-                    <a>R$1300</a>
+                    <h3>R$1300</h3>
                 </div>
                 <div className="row">
                     <IconCheck/>
-                    <a>Consultoria tributária</a>
+                    <h3>Consultoria tributária</h3>
                 </div>
                 <div className="row">
                     <IconCheck/>
-                    <a>Acompanhamento processual</a>
+                    <h3>Acompanhamento processual</h3>
                 </div>
                 <div className="row">
                     <IconCheck/>
-                    <a>Atualização semanal</a>
+                    <h3>Atualização semanal</h3>
                 </div>
                 <button className="btn-hire">Quero contratar</button>
                 <button className="btn-discount">Quero resgatar desconto</button>

@@ -8,7 +8,7 @@ function ProductCard (props) {
         <div className="product-card-container">
             {props.children}
             <h1 className="product-card-title">{title}</h1>
-            <a>{subtitle}</a>
+            <h3>{subtitle}</h3>
         </div>
     )
 }

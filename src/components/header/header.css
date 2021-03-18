@@ -18,14 +18,14 @@
 }
 
 
-a { 
+h3 { 
     color: #FCFCFC;
     text-decoration: inherit;
     font-size: 24px;
 }
 
 
-.NavMenu a:hover {
+.NavMenu h3:hover {
     font-size: 25px;
 }
 
