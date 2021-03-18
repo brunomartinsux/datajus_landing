@@ -29,16 +29,16 @@
 .pricing-header{
     background-color:#05D69D;
     width: 101%;
-    height:34px;
+    height:40px;
     border-radius:20px 20px 0px 0px;
     text-align:center;
     color:white;
 
 }
 
-.pricing-header h3{
+.pricing-header p{
+    margin-top: 2%;
     font-size:18px;
-    line-height:30px;
     font-weight:bold;
 }
 
@@ -52,9 +52,10 @@
     padding-top:12%;
 }
 
-.plans h3{
+.plans p{
+    font-size: 20px;
     color: rgb(27, 27, 27);
-    font-weight: 480;
+    font-weight: 500;
 }
 
 .plans h1{
@@ -65,10 +66,11 @@
 .row{
     display: flex;
     width: 90%;
-    padding-top:5%;
+    padding-top:2%;
+    align-items:center;
 }
 
-.row h3{
+.row p{
     color: rgba(27, 27, 27, 0.719);
     font-size: 20px;
     padding-left:2%;
@@ -76,10 +78,10 @@
 
 .btn-hire {
     align-self: center;
-    height: 50px;
+    height: 80px;
     cursor: pointer;
     width: 80%;
-    margin-top: 15%;
+    margin-top: 0%;
     margin-bottom: -10%;
     background-color: #38A3F1;
     color: #FCFCFC;
@@ -97,7 +99,7 @@
     align-self: center;
     height: 50px;
     cursor: pointer;
-    margin: 10% 0;
+    margin: 12% 0;
     background-color: transparent;
     color: #38A3F1;
     font-size: 20px;

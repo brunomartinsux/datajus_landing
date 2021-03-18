@@ -1,6 +1,5 @@
 import React from 'react';
 import './header.css'
-import whatsapp from '../../Icons/Vector.png'
 
 function Header (){
 
@@ -14,7 +13,7 @@ function Header (){
                     <h3>Preços</h3>
                     <h3>FAQ</h3>
             </nav>
-            <button><img src={whatsapp} alt="wppicon"/>Fale Conosco</button>
+            <button className="header-btn">Fale Conosco</button>
         </div>
     )
 }
