@@ -1,0 +1,50 @@
+.about-container {
+    width: 100%;
+    background-color: white;
+    height: 550px;
+}
+
+.about-content-container{
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 70%;
+    margin: 0 15%;
+    padding-top:5%;
+}
+
+.about-content-container a{
+
+    color: #1E2327;
+    line-height: 32px;
+}
+
+.about-content-container h1{
+
+    font-weight: 400;
+    font-size: 50px;
+    line-height: 50px;
+    /* or 81% */
+    
+    text-align: center;
+    letter-spacing: 0.3px;
+    
+    color: #1E2327;
+
+}
+
+.media {
+
+    padding-top:2%;
+    display: flex;
+    width: 20%;
+    justify-content: space-between;
+
+}
+
+strong {
+    color: #38A3F1;
+    font-weight: 450;
+}

@@ -1,0 +1,57 @@
+.HeadContainer {
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 80%;
+    margin: 0 10%;
+    background-color: #24292E;
+    color: #FCFCFC;
+}
+
+.NavMenu {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 40%;
+}
+
+
+a { 
+    color: #FCFCFC;
+    text-decoration: inherit;
+    font-size: 24px;
+}
+
+
+.NavMenu a:hover {
+    font-size: 25px;
+}
+
+
+button {
+    align-self: center;
+    height: 60px;
+    cursor: pointer;
+    min-width: 150px;
+    background-color: transparent;
+    color: #FCFCFC;
+    font-size: 24px;
+    border-radius: 20px;
+    border: 1px solid #FCFCFC;
+} 
+button:hover{
+    background-color: #00000034;
+}
+
+img {
+    align-self: center;
+    height: 25px;
+    width: 25px;
+    background-color: #FCFCFC;
+    margin-right: 10px;
+    flex-grow: 30px;
+}
+/* RESPONSIVE SIDE HEADER*/
+
