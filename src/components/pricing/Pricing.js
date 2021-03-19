@@ -5,7 +5,7 @@ import './pricing.css'
 function Pricing() {
 
     return(
-        <div className="pricing-container">
+        <div className="pricing-container" id="pricing">
              <h1>Preços</h1>
             <div className="pricing-content-container">
                 <div className="pricing-header">

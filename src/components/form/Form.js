@@ -17,7 +17,6 @@ const [email, setEmail] = useState('')
                 className="profile-input"
                 placeholder="     Nome completo"
                 type="text"
-                autoFocus
                 required
                 value={name}
                 onChange={(event) => setName(event.target.value)}
@@ -27,7 +26,6 @@ const [email, setEmail] = useState('')
                 className="profile-input"
                 placeholder="     (XX) XXXXX-XXXX"
                 type="text"
-                autoFocus
                 required
                 value={phone}
                 onChange={(event) => setPhone(event.target.value)}
@@ -37,7 +35,6 @@ const [email, setEmail] = useState('')
                 className="profile-input"
                 placeholder="     email@exemplo.com"
                 type="text"
-                autoFocus
                 required
                 value={email}
                 onChange={(event) => setEmail(event.target.value)}

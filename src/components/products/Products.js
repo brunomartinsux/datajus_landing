@@ -10,8 +10,9 @@ import JSON from './productstext'
 function Products () {
 
 
+
     return(
-            <div className="prd-container">
+            <div id="prd-container" className="prd-container">
                 <div className="prd-list">
                     <ProductCard title={JSON.produto1.titulo} subtitle={JSON.produto1.subtitulo}>
                         <IconUsers/>

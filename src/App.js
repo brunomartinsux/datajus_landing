@@ -9,6 +9,8 @@ import Pricing from './components/pricing/Pricing';
 import Products from './components/products/Products';
 
 function App() {
+
+
   return (
     <div className="App">
       < Header />
