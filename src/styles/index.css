@@ -42,7 +42,7 @@ code {
 @media screen and (max-width: 1000px){
  
  /* HEADER COMPONENT*/
-  .NavMenu h3 {
+  .NavMenu{
   display:none;
   }
 
