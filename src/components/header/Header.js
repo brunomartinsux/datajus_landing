@@ -1,7 +1,8 @@
 import React from 'react';
-import { Link } from "react-scroll";
-
 import './header.css'
+
+//Menu functions package
+import { Link } from "react-scroll";
 
 
 function Header (){
