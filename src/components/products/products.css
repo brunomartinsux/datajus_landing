@@ -7,8 +7,8 @@
 
 .prd-list {
     display: flex;
-    width: 90%;
-    margin: 5px 5%;
+    width: 80%;
+    margin: 5px 10%;
     height: 90%;
     justify-content: space-between;
 }
