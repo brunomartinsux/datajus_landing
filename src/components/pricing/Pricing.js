@@ -15,6 +15,7 @@ function Pricing() {
                     <h1>Plano Mensal</h1>
                     <p>R$1300</p>
                 </div>
+                <div className="separate"/>
                 <div className="row">
                     <IconCheck/>
                     <p>Consultoria tributária</p>

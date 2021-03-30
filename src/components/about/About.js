@@ -1,8 +1,9 @@
 import React from 'react'
 import './about.css'
-import IconActivity from '../../Icons/activity'
-import IconCheck from '../../Icons/check-square'
-import IconUsers from '../../Icons/users'
+import '../../Icons/icons.css'
+import IconInstagram from '../../Icons/instagram'
+import IconFacebook from '../../Icons/facebook'
+import IconWhatsapp from '../../Icons/whatsapp'
 
 function About () {
 
@@ -12,9 +13,9 @@ function About () {
                 <h1>A primeira <strong>Startup LegalTech</strong> que combina jurimetria com consultoria tributária. </h1>
                 <h3>Com mais de 20 anos de experiência em consultoria tributária, nossa equipe desenvolveu uma ferramenta que automatiza o acompanhamento dos processos e que auxilia na tomada de decisão, afim de aumentar a acertividade e trazendo celeridade processual. </h3>
                 <div className="media">
-                    <IconActivity/>
-                    <IconCheck />
-                    <IconUsers />
+                    <IconWhatsapp color={"#696969"}/>
+                    <IconInstagram color={"#696969"}/>
+                    <IconFacebook color={"#696969"}/>
                 </div>
             </div>
         </div>

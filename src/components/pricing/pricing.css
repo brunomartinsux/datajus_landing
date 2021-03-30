@@ -9,8 +9,14 @@
 }
 
 .pricing-container h1{
-
+    color: rgba(0, 0, 0, 0.808);
     font-size: 45px;
+}
+
+.separate {
+    height: 2px;
+    background-color:rgba(0, 0, 0, 0.096);
+    width: 90%;
 }
 
 
@@ -39,7 +45,7 @@
 .pricing-header p{
     margin-top: 2%;
     font-size:18px;
-    font-weight:bold;
+    font-weight:700;
 }
 
 .plans{
@@ -54,13 +60,14 @@
 
 .plans p{
     font-size: 20px;
-    color: rgb(27, 27, 27);
-    font-weight: 500;
+    color: rgba(0, 0, 0, 0.774);
+    font-weight: 600;
 }
 
 .plans h1{
-    font-weight:550;
+    font-weight:600;
     font-size:22px;
+    color: rgba(0, 0, 0, 0.808);
 }
 
 .row{
@@ -105,6 +112,7 @@
     font-size: 20px;
     border-radius: 20px;
     border: none;
+    font-weight: 600;
 } 
 .btn-discount:hover{
     font-size: 22px;

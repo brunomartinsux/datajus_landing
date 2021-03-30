@@ -1,7 +1,9 @@
 import React from 'react'
-import IconUsers from '../../Icons/users'
 import './footer.css'
 import { Link } from 'react-scroll'
+import IconWhatsapp from '../../Icons/whatsapp'
+import IconInstagram from '../../Icons/instagram'
+import IconFacebook from '../../Icons/facebook'
 
 function Footer() {
 
@@ -42,9 +44,9 @@ function Footer() {
             >FAQ</Link>
             </div>
             <div className="media-footer">
-                <IconUsers />
-                <IconUsers />
-                <IconUsers />
+                <IconWhatsapp color={"#ffffff"}/>
+                <IconInstagram color={"#ffffff"}/>
+                <IconFacebook color={"#ffffff"}/>
             </div>
         </div>
     )       

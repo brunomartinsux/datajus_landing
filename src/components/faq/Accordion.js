@@ -18,7 +18,7 @@ const useStyles = makeStyles((theme) => ({
     fontFamily:'Montserrat'
   },
   content: {
-    fontSize: theme.typography.pxToRem(20),
+    fontSize: theme.typography.pxToRem(18),
   },
 
 }));

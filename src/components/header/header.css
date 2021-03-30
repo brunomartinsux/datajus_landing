@@ -1,12 +1,12 @@
 .HeadContainer {
-
+    position: fixed;
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
-    width: 80%;
-    margin: 0 10%;
+    justify-content: space-around;
+    width: 100%;
     background-color: #24292E;
     color: #FCFCFC;
+    z-index: 800;
 }
 
 .NavMenu {
@@ -19,6 +19,9 @@
     font-size:22px;
 }
 
+.Hamburguer{
+    display: none;
+}
 
 h3 { 
     color: #FCFCFC;
@@ -48,13 +51,9 @@ button:hover{
     background-color: #00000034;
 }
 
-img {
-    align-self: center;
-    height: 25px;
-    width: 25px;
-    background-color: #FCFCFC;
-    margin-right: 10px;
-    flex-grow: 30px;
+.header-btn{
+    display:flex;
+    align-items:center;
 }
 /* RESPONSIVE SIDE HEADER*/
 

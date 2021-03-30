@@ -3,6 +3,10 @@ import './header.css'
 
 //Menu functions package
 import { Link } from "react-scroll";
+import IconWhatsapp from '../../Icons/whatsapp';
+import IconFacebook from '../../Icons/facebook';
+import IconInstagram from '../../Icons/instagram';
+
 
 
 function Header (){
@@ -46,6 +50,11 @@ function Header (){
             >FAQ</Link>
             </nav>
             <button className="header-btn">Fale Conosco</button>
+            <div className="Hamburguer">
+                <IconWhatsapp color={"#ffffff"}/>
+                <IconFacebook color={"#ffffff"}/>
+                <IconInstagram color={"#ffffff"}/>
+            </div>
         </div>
     )
 }
