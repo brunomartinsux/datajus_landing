@@ -17,14 +17,21 @@
 
 .about-content-container h3{
 
-    font-weight: normal;
-    color: #1E2327;
-    line-height: 32px;
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 25px;
+    line-height: 34px;
+
+    text-align: center;
+    letter-spacing: 0.3px;
+
+    color: rgba(30, 35, 39, 0.726);
 }
 
 .about-content-container h1{
 
-    font-weight: 400;
+    font-weight: 600;
     font-size: 50px;
     line-height: 50px;
     /* or 81% */
@@ -47,5 +54,5 @@
 
 strong {
     color: #38A3F1;
-    font-weight: 450;
+    font-weight: 600;
 }

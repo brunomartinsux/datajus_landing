@@ -1,11 +1,20 @@
 import { React, useState } from 'react'
 import './form.css'
+
+
 function Form(){
 
 const [name, setName] = useState('')
 const [phone, setPhone] = useState('')
 const [email, setEmail] = useState('')
 
+
+function HandleSubmit() {
+
+    var obj = {name, phone, email}
+
+   return console.log(obj)
+}
 
     return (
         <div className="form-container">
@@ -39,7 +48,7 @@ const [email, setEmail] = useState('')
                 value={email}
                 onChange={(event) => setEmail(event.target.value)}
             />
-            <button className="submit-btn">Enviar Formulário</button>
+            <button className="submit-btn" onClick={() => HandleSubmit()}>Enviar Formulário</button>
             </div>
         </div>
     )
