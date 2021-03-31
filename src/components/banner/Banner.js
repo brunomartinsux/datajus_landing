@@ -31,7 +31,7 @@ function Banner () {
             /> 
             </div>
             <div className="banner-container">
-                <h1 className="banner-title">Fora Bolsonaro! <strong>Datajus</strong> a favor do impeachment.</h1>
+                <h1 className="banner-title">Consultoria tributária na <strong>Datajus</strong> é levada a sério!</h1>
                 <h3 className="banner-subtitle">Consultores especializados somados a inteligência artificial e atendimento personalizado.</h3>
                 <div className="banner-footer">
                     <button className="saiba-mais-btn" onClick={() => handleClick(3000)}>Saiba Mais</button>
