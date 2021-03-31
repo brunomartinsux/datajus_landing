@@ -287,5 +287,9 @@ color: rgba(30, 35, 39, 0.884);
   justify-content: space-between;
 }
 
+.discount-content-container {
+  min-width: 80%;
+}
+
 
 }

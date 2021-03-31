@@ -2,6 +2,8 @@ import React from 'react'
 import IconCheck from '../../Icons/check'
 import './pricing.css'
 
+import { Link } from 'react-router-dom'
+
 function Pricing() {
 
     return(
@@ -29,7 +31,7 @@ function Pricing() {
                     <p>Atualização semanal</p>
                 </div>
                 <button className="btn-hire">Quero contratar</button>
-                <button className="btn-discount">Quero resgatar desconto</button>
+                <button className="btn-discount"><Link to="/desconto" style={{ color: 'inherit', textDecoration: 'inherit'}}>Quero resgatar desconto</Link></button>
             </div>
         </div>
     )
