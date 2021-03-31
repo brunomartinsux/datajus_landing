@@ -20,10 +20,10 @@ function Banner () {
                 params={{     
                 particles: { 
                     number: { 
-                    value: 30, 
+                    value: 10, 
                     density: { 
                         enable: true, 
-                        value_area: 500, 
+                        value_area: 300, 
                     } 
                     }, 
                 }, 
