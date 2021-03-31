@@ -1,9 +1,13 @@
 import React from "react"
 
-function IconMenu (){
+function IconMenu (props){
 
-    function HandleIconClick(){
+    const {menu, setMenu} = props
 
+    function HandleIconClick(){ 
+
+    menu? setMenu(false):setMenu(true)
+        
     }
 
     return (

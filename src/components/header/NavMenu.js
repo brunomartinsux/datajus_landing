@@ -1,23 +1,20 @@
-import { React, useState } from 'react';
+import { React } from 'react';
 import './header.css'
+import '../about/about.css'
 
 //Menu functions package
 import { Link } from "react-scroll";
-import IconMenu from '../../Icons/hamburguer';
-import NavMenu from './NavMenu';
-import IconWhatsapp from '../../Icons/whatsapp';
+import IconClose from '../../Icons/close'
 
 
 
-function Header (){
+function NavMenu (props){
 
-
-    const [menu, setMenu] = useState(false)
+    const {menu, setMenu} = props
 
     return (
-        <div className='HeadContainer' >
-            <h1 id={'logo'} href="#">Datajus</h1 >
-            <div className='NavMenu' id="nav-menu">
+        <div className='NavBarMenu' >
+            <div className='Nav' id="nav-menu">
             <Link
                 activeClass="active"
                 to="prd-container"
@@ -50,17 +47,12 @@ function Header (){
                 offset={-70}
                 duration={500}
             >FAQ</Link>
+            <IconClose menu={menu} setMenu={setMenu}/>
             </div>
-            <button className="header-btn" onClick={() => window.open('https://api.whatsapp.com/send?phone=5547997086040&text=Ol%C3%A1%2C%20vim%20do%20site%20da%20Datajus.%20Gostaria%20de%20saber%20mais%20sobre%20o%20Servi%C3%A7o!')}
-            >   <IconWhatsapp color={"#f2f2f2"}/>
-                 Fale Conosco
-            </button>
-            <div className="Hamburguer">
-            <IconMenu menu={menu} setMenu={setMenu}/>
-            </div>
-            { menu? <NavMenu menu={menu} setMenu={setMenu}/> : null }
+            
         </div>
+        
     )
 }
 
-export default Header
+export default NavMenu
