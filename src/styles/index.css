@@ -291,5 +291,37 @@ color: rgba(30, 35, 39, 0.884);
   min-width: 80%;
 }
 
+.signin-container{
+  display: flex;
+  flex-direction: column !important;
+}
+
+.todo-container{
+  width: 100% !important;
+}
+
+.register-form-container{
+  width: 100% !important;
+}
+
+.todo-content-container {
+  width: 80% !important;
+  margin: 10% 10% !important;
+  height: 90% !important;
+}
+
+.register-content-container h1{
+
+  font-size: 20px !important;
+  line-height: 20px !important;
+  text-align: center;
+
+}
+
+.register-content-container P{
+  font-size: 15px !important;
+  line-height: 20px !important;
+  text-align: center;
+}
 
 }
