@@ -30,7 +30,7 @@ function Pricing() {
                     <IconCheck/>
                     <p>Atualização semanal</p>
                 </div>
-                <button className="btn-hire">Quero contratar</button>
+                <button className="btn-hire"><Link to="/cadastro" style={{ color: 'inherit', textDecoration: 'inherit'}}>Quero contratar</Link></button>
                 <button className="btn-discount"><Link to="/desconto" style={{ color: 'inherit', textDecoration: 'inherit'}}>Quero resgatar desconto</Link></button>
             </div>
         </div>
