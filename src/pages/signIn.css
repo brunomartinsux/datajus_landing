@@ -1,0 +1,125 @@
+.signin-container{
+    display: flex;
+    flex-direction: row;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+.todo-container{
+    display: flex;
+    width:45%;
+    height: 100%;
+    background-color: #ffffff;
+}
+
+.todo-content-container {
+    width: 60%;
+    height: 80%;
+    margin: 10% 20%;
+    border: 2px solid;
+    border-radius: 20px;
+    border-color: #afafaf5d;
+
+}
+
+.todo-item{
+    display: flex;
+    margin: 12%;
+    flex-direction: row;
+    width: 100%;
+
+}
+
+.todo-item-content {
+    width: 60%;
+    margin-left: 10px;
+}
+
+.todo-item-content h1{
+    line-height: 0px;
+    font-size: 20px;
+}
+
+.todo-item-content p{
+    line-height: 22px;
+    font-size: 15px;
+    color: #797979;
+    font-weight: 500;
+}
+
+.register-form-container {
+    display: flex;
+    width:55%;
+    height: 100%;
+    background-color: #F5F5F5;
+}
+
+.register-content-container{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin: 10% 15%;
+}
+
+.register-content-container h1{
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 0;
+    /* identical to box height, or 150% */
+
+    letter-spacing: -0.15px;
+    text-transform: uppercase;
+
+    color: #1E2327;
+}
+
+.register-content-container P{
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 5px;
+    /* identical to box height, or 120% */
+
+    letter-spacing: -0.15px;
+
+    color: rgba(30, 35, 39, 0.8);
+}
+
+.use-term{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-top: 3%;
+}
+
+.use-term input {
+    height: 20px;
+    width: 25px;
+    border-radius: 80px;
+}
+
+.use-term p{
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.submit-btn-register{
+    align-self: center;
+    height: 50px;
+    cursor: pointer;
+    width: 100%;
+    margin-top: 5%;
+    background-color: #38A3F1;
+    color: #FCFCFC;
+    font-size: 24px;
+    font-weight: 600;
+    border-radius: 20px;
+    border: none;
+} 
+button:hover{
+    background-color: #00000034;
+}

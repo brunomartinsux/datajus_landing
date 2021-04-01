@@ -1,12 +1,14 @@
 import React from 'react'
 import Homepage from './pages/Homepage'
+import Discount from './pages/Discount';
+import Register from './pages/SignIn'
 
 import {
   BrowserRouter as Router,
   Switch,
   Route,
 } from "react-router-dom";
-import Discount from './pages/Discount';
+
 
 
 function App() {
@@ -16,6 +18,7 @@ function App() {
         <Switch>
         <Route exact path="/" component={Homepage} />
         <Route exact path="/desconto" component={Discount} />
+        <Route exact path="/cadastro" component={Register} />
         </Switch>
       </Router>
     </div>
