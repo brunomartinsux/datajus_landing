@@ -11,7 +11,7 @@ function ConfirmEmail (){
                 <img alt="confirm-img" src={image}/>
                 <h1>Enviamos um email de confirmação para você!</h1>
                 <p>Verifique a caixa de entrada do seu email e siga as instruções ;D</p>
-                <button className="precos-btn" onClick={() => window.location = ('http://localhost:3000/')}>Página inicial</button>
+                <button className="precos-btn" onClick={() => window.location = ('http://datajus.site/')}>Página inicial</button>
             </div>
         </div>
     )

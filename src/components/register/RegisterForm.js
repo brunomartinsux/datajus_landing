@@ -30,7 +30,7 @@ function HandleSubmit() {
         }).then(response => {
             if(response.status === 201 ){
                 setWait(true)
-                window.location = ('http://localhost:3000/confirmacao')
+                window.location = ('http://datajus.site/confirmacao')
                 
             }
       
