@@ -8,6 +8,7 @@ import {
   Switch,
   Route,
 } from "react-router-dom";
+import ConfirmEmail from './pages/Confirmation';
 
 
 
@@ -19,6 +20,7 @@ function App() {
         <Route exact path="/" component={Homepage} />
         <Route exact path="/desconto" component={Discount} />
         <Route exact path="/cadastro" component={Register} />
+        <Route exact path="/confirmacao" component={ConfirmEmail} />
         </Switch>
       </Router>
     </div>

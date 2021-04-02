@@ -306,8 +306,8 @@ color: rgba(30, 35, 39, 0.884);
 
 .todo-content-container {
   width: 80% !important;
-  margin: 10% 10% !important;
-  height: 90% !important;
+  margin: 2.5% 10% !important;
+  height: 95% !important;
 }
 
 .register-content-container h1{
@@ -322,6 +322,28 @@ color: rgba(30, 35, 39, 0.884);
   font-size: 15px !important;
   line-height: 20px !important;
   text-align: center;
+}
+
+.confirm-content-container{
+  width: 90% !important;
+  margin: 0 5% !important;
+
+}
+
+.confirm-content-container h1{
+
+  font-size: 20px !important;
+}
+.confirm-content-container h2{
+
+
+  font-size: 18px !important;
+}
+
+.confirm-content-container p{
+
+  font-size: 15px !important;
+  line-height: 20px !important;
 }
 
 }

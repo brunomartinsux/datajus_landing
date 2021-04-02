@@ -8,12 +8,40 @@ const [name, setName] = useState('')
 const [phone, setPhone] = useState('')
 const [email, setEmail] = useState('')
 
+const[sent, setSent] = useState(false)
+
 
 function HandleSubmit() {
 
-    var obj = {name, phone, email}
+    if(name && phone && email){
+        fetch('https://leads-lake.herokuapp.com/leads/', {
+            method: 'POST',
+            headers: {
+              Accept: 'application/json',
+              'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({
+                    complete_name: name,
+                    phone_no: phone,
+                    email: email,
+                    lead_type: "lead-capture-form"
+            })
+          }).then(response => {
+            console.log(response)
+              if(response.status === 201) {
+                setSent(true);
+              }
+              
+            });
+            setName('')
+            setPhone('')
+            setEmail('')
+    } else {
+        window.alert('Preencha todos os campos do formulário corretamente.')
+    }
+    
 
-   return console.log(obj)
+        
 }
 
     return (
@@ -48,7 +76,13 @@ function HandleSubmit() {
                 value={email}
                 onChange={(event) => setEmail(event.target.value)}
             />
-            <button className="submit-btn" onClick={() => HandleSubmit()}>Enviar Formulário</button>
+            {
+                sent? <button className="submit-btn" style={{backgroundColor: '#008F39', cursor:'normal'}}>Enviado com Sucesso!</button>
+                :
+                <button className="submit-btn" onClick={() => HandleSubmit()}>Enviar Formulário</button>  
+                
+            }
+            
             </div>
         </div>
     )

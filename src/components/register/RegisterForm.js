@@ -3,16 +3,44 @@ import { React, useState} from 'react'
 function RegisterForm(){
 
     const [name, setName] = useState('')
-const [phone, setPhone] = useState('')
-const [email, setEmail] = useState('')
+    const [phone, setPhone] = useState('')
+    const [email, setEmail] = useState('')
+    const [cnpj, setCnpj] = useState('')
+
+    const[wait,setWait] = useState(false)
 
 
 function HandleSubmit() {
 
-    var obj = {name, phone, email}
+    if(name && email && phone && cnpj && document.getElementById('checkbox').checked === true) {
 
-   return console.log(obj)
+        fetch('https://leads-lake.herokuapp.com/leads/', {
+        method: 'POST',
+        headers: {
+            Accept: 'application/json',
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({
+                complete_name: name,
+                phone_no: phone,
+                email: email,
+                document: cnpj,
+                lead_type: "register"
+        })
+        }).then(response => {
+            if(response.status === 201 ){
+                setWait(true)
+                window.location = ('http://localhost:3000/confirmacao')
+                
+            }
+      
+        });
+    } else {
+        window.alert('Preencha todos os campos do formulário.')
+    }
 }
+
+    
 
     return(
         <div className='register-form-container'>
@@ -52,14 +80,19 @@ function HandleSubmit() {
                 placeholder="     000.000.000/0001-00"
                 type="text"
                 required
-                value={email}
-                onChange={(event) => setEmail(event.target.value)}
+                value={cnpj}
+                onChange={(event) => setCnpj(event.target.value)}
             />
             <div className='use-term'>
-                <input type='checkbox'/>
+                <input type='checkbox' id="checkbox"/>
                 <p>Eu concordo e aceito os <strong>Termos de Uso</strong></p>
             </div>
+            {wait? 
+            <button className="submit-btn-register">Verificando...</button>
+            :
             <button className="submit-btn-register" onClick={() => HandleSubmit()}>Enviar Formulário</button>
+            }
+            
             </div>
         </div>
     )

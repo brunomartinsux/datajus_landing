@@ -1,17 +1,22 @@
-import React from 'react'
+import React, { useState } from 'react'
+import DiscountDisplay from '../components/discount/DiscountDisplay'
+import DiscountForm from '../components/discount/DiscountForm'
 import './discount.css'
 
 function Discount(){
 
+    const [isVerified, setIsVerified] = useState(false)
+    const [discount,setDiscount] = useState('0')
+
+
     return(
-        <div className="discount-container">
-            <div className="discount-content-container">
-                <h1 className="discount-title">GANHE ATÉ <strong>30% DE DESCONTO</strong> NAS SUAS MENSALIDADES.</h1>
-                <p>Informe seu CNPJ abaixo para calcularmos seu desconto:</p>
-                <label>CNPJ</label>
-                <input className="profile-input" placeholder="XX.XXX.XXX/0001-XX" />
-                <button className="dicount-btn" onClick={() => {}}>Resgatar Desconto</button>
-            </div>
+        <div>
+            {isVerified?    
+            <DiscountDisplay desconto={discount}/> 
+            : 
+            <DiscountForm setDiscount={setDiscount} setIsVerified={setIsVerified}/>
+            }
+            
         </div>
     )
 }
