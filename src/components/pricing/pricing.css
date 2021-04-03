@@ -32,6 +32,10 @@
     border-color: #4646461e;
 }
 
+.pricing-content-container a{
+    min-width: 90%;
+}
+
 .pricing-header{
     background-color:#05D69D;
     width: 101%;
@@ -85,16 +89,15 @@
 
 .btn-hire {
     align-self: center;
-    min-height: 50px;
+    max-height: 50px;
     cursor: pointer;
-    width: 80%;
-    margin-top: 0%;
-    margin-bottom: -10%;
+    width: 90%;
+    margin: 0% 5%;
     background-color: #38A3F1;
     color: #FCFCFC;
     font-size: 20px;
     font-weight: bold;
-    border-radius: 20px;
+    border-radius: 22px;
     border: none;
 } 
 .btn-hire:hover{
@@ -106,7 +109,7 @@
     align-self: center;
     height: 50px;
     cursor: pointer;
-    margin: 12% 0;
+    margin: 0% 0;
     background-color: transparent;
     color: #38A3F1;
     font-size: 20px;
