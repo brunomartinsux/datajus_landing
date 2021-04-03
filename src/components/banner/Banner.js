@@ -28,8 +28,7 @@ function Banner () {
                 <h1 className="banner-title">Consultoria tributária na <strong>Datajus</strong> é levada a sério!</h1>
                 <h3 className="banner-subtitle">Consultores especializados somados a inteligência artificial e atendimento personalizado.</h3>
                 <div className="banner-footer">
-                    <button className="saiba-mais-btn">
-                        <Link
+                <Link
                         activeClass="active"
                         to="form-container"
                         spy={true}
@@ -37,11 +36,12 @@ function Banner () {
                         offset={-70}
                         duration={500}
                         >
-                            Saiba Mais 
-                        </Link>
+                           
+                       
+                    <button className="saiba-mais-btn">
+                    Saiba Mais 
                     </button>
-                   
-                    <button className="precos-btn">  
+                    </Link>
                         <Link
                             activeClass="active"
                             to="pricing-container"
@@ -50,9 +50,9 @@ function Banner () {
                             offset={-70}
                             duration={500}
                             >
-                                Ver preços 
+                    <button className="precos-btn">Ver preços</button>
                         </Link>
-                    </button>
+                   
                 </div>
             </div>
         </div>

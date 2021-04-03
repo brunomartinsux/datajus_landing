@@ -1,19 +1,27 @@
 import React, { useState } from 'react'
 
+const axios = require('axios')
+
 function DiscountForm(props) {
 
-    const {setIsVerified} = props
+    const {setIsVerified, setDiscount} = props
 
     const [cnpj,setCnpj] = useState('')
 
     function handleSubmit(){
-        if(cnpj) {
-                    setIsVerified(true)
-              
-                    
-        } else {
-            window.alert('Preencha o CNPJ corretamente.')
-        }
+        axios({
+            method: 'post',
+            url: 'https://leads-lake.herokuapp.com/solds/',
+            data: {
+                document:cnpj
+            }
+          }).then(response =>{
+              console.log(response.data.valordesconto)
+              if(response.status === 201){
+                setDiscount(response.data.valordesconto)                
+                  setIsVerified(true)
+              }
+          })
     }
 
     return(

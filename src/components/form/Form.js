@@ -9,6 +9,7 @@ const [phone, setPhone] = useState('')
 const [email, setEmail] = useState('')
 
 const[sent, setSent] = useState(false)
+const[formBtnText, setFormText] = useState('Enviar Formulário')
 
 
 function HandleSubmit() {
@@ -27,6 +28,7 @@ function HandleSubmit() {
                     lead_type: "lead-capture-form"
             })
           }).then(response => {
+            setFormText('Enviando...')
             console.log(response)
               if(response.status === 201) {
                 setSent(true);
@@ -79,7 +81,7 @@ function HandleSubmit() {
             {
                 sent? <button className="submit-btn" style={{backgroundColor: '#008F39', cursor:'normal'}}>Enviado com Sucesso!</button>
                 :
-                <button className="submit-btn" onClick={() => HandleSubmit()}>Enviar Formulário</button>  
+                <button id='submit-btn' className="submit-btn" onClick={() => HandleSubmit()}>{formBtnText}</button>  
                 
             }
             
