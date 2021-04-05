@@ -33,6 +33,30 @@ function DiscountForm(props) {
             setDiscount(cadastroDesconto.data['valor desconto'])
             setIsVerified(true)
         }
+
+        //CASO O LEAD NAO SEJA CADASTRADO, DEVE CRIAR
+        } else {
+            const novoLead = await axios({
+                method: 'post',
+                url: `https://leads-lake.herokuapp.com/leads/`,
+                data: {
+                    'document':cnpj,
+                    'lead_type': 'ld-desconto'
+                }
+            })
+
+        //PEGAR ID DO NOVO LEAD CADASTRADO 
+        if(novoLead.data !== null){
+            const novoLeadDesconto = await axios({
+                method: 'post',
+                url: `https://leads-lake.herokuapp.com/solds/${novoLead.data.id}`
+            })
+
+            if(novoLeadDesconto.data !== null){
+                setDiscount(novoLeadDesconto.data['valor desconto'])
+                setIsVerified(true)
+            }
+        }   
         }
     }
 
