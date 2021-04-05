@@ -44,18 +44,21 @@ function DiscountForm(props) {
                     'lead_type': 'ld-desconto'
                 }
             })
-
+        //RECEBE ID DO LEAD PARA CADASTRO DE DESCONTO
+            const novoLeadId = await axios({
+                method: 'get',
+                url: `https://leads-lake.herokuapp.com/leads/${cnpj}`
+            })
+            
         //CADASTRAR DESCONTO NO NOVO LEAD
-        if(novoLead.data !== null){
-            const novoLeadDesconto = await axios({
+        const novoLeadDesconto = await axios({
                 method: 'post',
-                url: `https://leads-lake.herokuapp.com/solds/${novoLead.data.id}`
+                url: `https://leads-lake.herokuapp.com/solds/${novoLeadId.data.id}`
             })
         //ATRIBUIR DESCONTO AS VARIAVEIS E CONFIRMAR A MUDANÇA DE PÁGINA
             if(novoLeadDesconto.data !== null){
                 setDiscount(novoLeadDesconto.data['valor desconto'])
                 setIsVerified(true)
-            }
         }   
         }
     }
