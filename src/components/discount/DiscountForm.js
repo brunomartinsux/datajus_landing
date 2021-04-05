@@ -45,13 +45,13 @@ function DiscountForm(props) {
                 }
             })
 
-        //PEGAR ID DO NOVO LEAD CADASTRADO 
+        //CADASTRAR DESCONTO NO NOVO LEAD
         if(novoLead.data !== null){
             const novoLeadDesconto = await axios({
                 method: 'post',
                 url: `https://leads-lake.herokuapp.com/solds/${novoLead.data.id}`
             })
-
+        //ATRIBUIR DESCONTO AS VARIAVEIS E CONFIRMAR A MUDANÇA DE PÁGINA
             if(novoLeadDesconto.data !== null){
                 setDiscount(novoLeadDesconto.data['valor desconto'])
                 setIsVerified(true)
