@@ -9,59 +9,65 @@ function DiscountForm(props) {
     const [cnpj,setCnpj] = useState('')
 
     async function handleSubmit(){
-        
-        const consultaLead = await axios({
-            method: 'get',
-            url: `https://leads-lake.herokuapp.com/leads/${cnpj}`
-        })
-        //Verifica se CNPJ é lead
-        if(consultaLead.data !== null){
-            const leadId = consultaLead.data.id
-            const desconto = await axios({
-                method: 'get',
-                url: `https://leads-lake.herokuapp.com/solds/${leadId}`
-            });
-        //Verificar se já possui desconto cadastrado
-        if(desconto.data !== null){
-            setDiscount(desconto.data.sold)
-            setIsVerified(true)
-        } else {
-            const cadastroDesconto = await axios({
-                method: 'post',
-                url: `https://leads-lake.herokuapp.com/solds/${leadId}`
-            })
-            setDiscount(cadastroDesconto.data['valor desconto'])
-            setIsVerified(true)
-        }
 
-        //CASO O LEAD NAO SEJA CADASTRADO, DEVE CRIAR
-        } else {
-            const novoLead = await axios({
-                method: 'post',
-                url: `https://leads-lake.herokuapp.com/leads/`,
-                data: {
-                    'document':cnpj,
-                    'lead_type': 'ld-desconto'
-                }
-            })
-            console.log(novoLead.status)
-        //RECEBE ID DO LEAD PARA CADASTRO
-            const novoLeadId = await axios({
+        if(cnpj) {
+            const consultaLead = await axios({
                 method: 'get',
                 url: `https://leads-lake.herokuapp.com/leads/${cnpj}`
             })
-            
-        //CADASTRAR DESCONTO NO NOVO LEAD
-        const novoLeadDesconto = await axios({
-                method: 'post',
-                url: `https://leads-lake.herokuapp.com/solds/${novoLeadId.data.id}`
-            })
-        //ATRIBUIR DESCONTO AS VARIAVEIS E CONFIRMAR A MUDANÇA DE PÁGINA
-            if(novoLeadDesconto.data !== null){
-                setDiscount(novoLeadDesconto.data['valor desconto'])
+            //Verifica se CNPJ é lead
+            if(consultaLead.data !== null){
+                const leadId = consultaLead.data.id
+                const desconto = await axios({
+                    method: 'get',
+                    url: `https://leads-lake.herokuapp.com/solds/${leadId}`
+                });
+            //Verificar se já possui desconto cadastrado
+            if(desconto.data !== null){
+                setDiscount(desconto.data.sold)
                 setIsVerified(true)
-        }   
+            } else {
+                const cadastroDesconto = await axios({
+                    method: 'post',
+                    url: `https://leads-lake.herokuapp.com/solds/${leadId}`
+                })
+                setDiscount(cadastroDesconto.data['valor desconto'])
+                setIsVerified(true)
+            }
+    
+            //CASO O LEAD NAO SEJA CADASTRADO, DEVE CRIAR
+            } else {
+                const novoLead = await axios({
+                    method: 'post',
+                    url: `https://leads-lake.herokuapp.com/leads/`,
+                    data: {
+                        'document':cnpj,
+                        'lead_type': 'ld-desconto'
+                    }
+                })
+                console.log(novoLead.status)
+            //RECEBE ID DO LEAD PARA CADASTRO
+                const novoLeadId = await axios({
+                    method: 'get',
+                    url: `https://leads-lake.herokuapp.com/leads/${cnpj}`
+                })
+                
+            //CADASTRAR DESCONTO NO NOVO LEAD
+            const novoLeadDesconto = await axios({
+                    method: 'post',
+                    url: `https://leads-lake.herokuapp.com/solds/${novoLeadId.data.id}`
+                })
+            //ATRIBUIR DESCONTO AS VARIAVEIS E CONFIRMAR A MUDANÇA DE PÁGINA
+                if(novoLeadDesconto.data !== null){
+                    setDiscount(novoLeadDesconto.data['valor desconto'])
+                    setIsVerified(true)
+            }   
+            }
+        } else {
+            window.alert('Preencher o CNPJ corretamente.')
         }
+        
+        
     }
 
     return(

@@ -291,6 +291,10 @@ color: rgba(30, 35, 39, 0.884);
   min-width: 80%;
 }
 
+.display-discount-content{
+  min-width: 80% !important;
+}
+
 .signin-container{
   display: flex;
   flex-direction: column !important;

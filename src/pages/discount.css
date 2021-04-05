@@ -27,7 +27,7 @@
     background-color: #38A3F1;
     color: #FCFCFC;
     font-size: 24px;
-    border-radius: 20px;
+    border-radius: px;
     border: none;
 } 
 button:hover{
@@ -52,4 +52,26 @@ button:hover{
     letter-spacing: -0.15px;
 
     color: rgba(30, 35, 39, 0.8);
+}
+.display-discount-content{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    min-width: 40%;
+    border: 2px solid;
+    height: 90%;
+    border-radius: 20px;
+    border-color: #0000000a;
+    margin: 5% 10%;
+    padding: 2%;
+}
+
+.display-discount-container {
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+    background-color: #ffffff
 }
