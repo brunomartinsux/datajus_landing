@@ -8,20 +8,32 @@ function DiscountForm(props) {
 
     const [cnpj,setCnpj] = useState('')
 
-    function handleSubmit(){
-        axios({
-            method: 'post',
-            url: 'https://leads-lake.herokuapp.com/solds/',
-            data: {
-                document:cnpj
-            }
-          }).then(response =>{
-              console.log(response.data.valordesconto)
-              if(response.status === 201){
-                setDiscount(response.data.valordesconto)                
-                  setIsVerified(true)
-              }
-          })
+    async function handleSubmit(){
+        
+        const consultaLead = await axios({
+            method: 'get',
+            url: `https://leads-lake.herokuapp.com/leads/${cnpj}`
+        })
+        //Verifica se CNPJ é lead
+        if(consultaLead.data !== null){
+            const leadId = consultaLead.data.id
+            const desconto = await axios({
+                method: 'get',
+                url: `https://leads-lake.herokuapp.com/solds/${leadId}`
+            });
+        //Verificar se já possui desconto cadastrado
+        if(desconto.data !== null){
+            setDiscount(desconto.data.sold)
+            setIsVerified(true)
+        } else {
+            const cadastroDesconto = await axios({
+                method: 'post',
+                url: `https://leads-lake.herokuapp.com/solds/${leadId}`
+            })
+            setDiscount(cadastroDesconto.data['valor desconto'])
+            setIsVerified(true)
+        }
+        }
     }
 
     return(
