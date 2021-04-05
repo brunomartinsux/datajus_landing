@@ -36,7 +36,7 @@ function DiscountForm(props) {
 
         //CASO O LEAD NAO SEJA CADASTRADO, DEVE CRIAR
         } else {
-            const novoLead = await axios({
+            axios({
                 method: 'post',
                 url: `https://leads-lake.herokuapp.com/leads/`,
                 data: {
