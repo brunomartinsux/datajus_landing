@@ -7,10 +7,16 @@ function DiscountForm(props) {
     const {setIsVerified, setDiscount} = props
 
     const [cnpj,setCnpj] = useState('')
+    const [submitText, setSubmitText] = useState('Resgatar Desconto')
 
     async function handleSubmit(){
 
+        
+
         if(cnpj) {
+
+            setSubmitText('Verificando CNPJ...')
+
             const consultaLead = await axios({
                 method: 'get',
                 url: `https://leads-lake.herokuapp.com/leads/${cnpj}`
@@ -82,7 +88,7 @@ function DiscountForm(props) {
                 required
                 value={cnpj}
                 onChange={(event) => setCnpj(event.target.value)}/>
-                <button  className="dicount-btn" onClick={() => handleSubmit()}>Resgatar Desconto</button>
+                <button  className="dicount-btn" onClick={() => handleSubmit()}>{submitText}</button>
             </div>
         </div>
     )

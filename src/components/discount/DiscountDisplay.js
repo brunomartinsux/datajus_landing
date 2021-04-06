@@ -22,7 +22,7 @@ function DiscountDisplay (props){
                         <h1>Tem certeza que deseja fechar?</h1>
                         <p>O seu desconto continuará válido por apenas 5 dias.</p>
                         <div className="close-footer"> 
-                            <button className="dicount-btn"  onClick={() => window.location = ('http://datajus.site/')}>Sim</button>
+                            <button className="dicount-btn" style={{backgroundColor:'transparent', color:"#38A3F1", borderColor:"#F5F5F5", border:"2px solid"}}  onClick={() => window.location = ('http://datajus.site/')}>Sim</button>
                             <button  className="dicount-btn"  onClick={() => setClose(false)}>Não</button>
                         </div>
                     </div>
