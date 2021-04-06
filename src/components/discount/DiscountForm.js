@@ -78,10 +78,11 @@ function DiscountForm(props) {
                 <label>CNPJ</label>
                 <input className="profile-input" placeholder="XX.XXX.XXX/0001-XX"
                 type="text"
+                data-mask="00.000.000/0000-00"
                 required
                 value={cnpj}
                 onChange={(event) => setCnpj(event.target.value)}/>
-                <button className="dicount-btn" onClick={() => handleSubmit()}>Resgatar Desconto</button>
+                <button  className="dicount-btn" onClick={() => handleSubmit()}>Resgatar Desconto</button>
             </div>
         </div>
     )
