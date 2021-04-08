@@ -18,7 +18,7 @@ function DiscountDisplay (props){
         <div className="display-discount-container">
             {close? 
                 <div className="close-container"> 
-                    <div className="close-content-container"> 
+                    <div className="close-content-container scale-up-center"> 
                         <h1>Tem certeza que deseja fechar?</h1>
                         <p>O seu desconto continuará válido por apenas 5 dias.</p>
                         <div className="close-footer"> 

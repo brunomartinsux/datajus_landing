@@ -25,8 +25,8 @@ function Banner () {
             /> 
             </div>
             <div className="banner-container">
-                <h1 className="banner-title">Consultoria tributária na <strong>Datajus</strong> é levada a sério!</h1>
-                <h3 className="banner-subtitle">Consultores especializados somados a inteligência artificial e atendimento personalizado.</h3>
+                <h1 className="banner-title text-focus-in">Consultoria tributária na <strong>Datajus</strong> é levada a sério!</h1>
+                <h3 className="banner-subtitle text-focus-in">Consultores especializados somados a inteligência artificial e atendimento personalizado.</h3>
                 <div className="banner-footer">
                 <Link
                         activeClass="active"

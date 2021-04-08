@@ -78,7 +78,7 @@ function DiscountForm(props) {
 
     return(
         <div className="discount-container">
-            <div className="discount-content-container">
+            <div className="discount-content-container scale-up-center">
                 <h1 className="discount-title">GANHE ATÉ <strong>30% DE DESCONTO</strong> NAS SUAS MENSALIDADES.</h1>
                 <p>Informe seu CNPJ abaixo para calcularmos seu desconto:</p>
                 <label>CNPJ</label>
