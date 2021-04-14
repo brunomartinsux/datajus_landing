@@ -333,10 +333,12 @@ color: rgba(30, 35, 39, 0.884);
 
 .todo-container{
   width: 100% !important;
+  height: 150% !important;
 }
 
 .register-form-container{
   width: 100% !important;
+  height: 150% !important;
 }
 
 .todo-content-container {
