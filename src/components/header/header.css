@@ -9,6 +9,21 @@
     z-index: 800;
 }
 
+.HeadContainer h1 {
+    font-family: Yellowtail;
+font-style: normal;
+font-weight: normal;
+font-size: 43px;
+line-height: 0px;
+padding: 0.5%;
+/* identical to box height, or 0% */
+
+
+color: #FFFFFF;
+
+text-shadow: 0px -30px 60px rgba(0, 0, 0, 0.5);
+}
+
 .scale-in-ver-top {
 	animation: scale-in-ver-top 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
 }
@@ -83,7 +98,7 @@ button {
     align-self: center;
     height: 60px;
     cursor: pointer;
-    min-width: 150px;
+    min-width: 180px;
     background-color: transparent;
     color: #FCFCFC;
     font-size: 24px;
@@ -97,6 +112,9 @@ button:hover{
 .header-btn{
     display:flex;
     align-items:center;
+    width: 15%;
+    margin-left: -5%;
+    justify-content: space-around;
 }
 /* RESPONSIVE SIDE HEADER*/
 
