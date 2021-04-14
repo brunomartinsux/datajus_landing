@@ -29,7 +29,7 @@ function HandleSubmit() {
             
             // VERIFICANDO SE O EMAIL É VALIDO
 
-            if(response.format_valid && response.smtp_check){
+            if(response.data.format_valid && response.data.smtp_check){
                 fetch('https://leads-lake.herokuapp.com/leads/', {
             method: 'POST',
             headers: {
