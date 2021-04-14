@@ -7,7 +7,7 @@ function ToDo(){
 
     return(
         <div className='todo-container'>
-            <div className='todo-content-container'>
+            <div className='todo-content-container scale-up-center'>
                 <div className='todo-item'>
                     <IconActivity/>
                     <div className='todo-item-content'>

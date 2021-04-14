@@ -89,7 +89,7 @@ function HandleSubmit() {
 
     return(
         <div className='register-form-container'>
-            <div className='register-content-container'>
+            <div className='register-content-container scale-up-center'>
                 <h1>FORMULÁRIO DE CADASTRO</h1>
                 <p>Preencha todas as informações abaixo:</p>
                 <label className="name-label">Nome Completo</label>
