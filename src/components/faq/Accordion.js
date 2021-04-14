@@ -38,8 +38,22 @@ export default function SimpleAccordion() {
         </AccordionSummary>
         <AccordionDetails>
           <Typography className={classes.content}>
-          Ao contratar nossos serviços, nos comprometemos assessoria tributária de até 10 processos. Caso surjam novos processos,
+          Ao contratar nossos serviços, nos comprometemos assessoria tributária de <strong>até 10 processos inclusos</strong>. Caso surjam novos processos,
           será cobrado um plus adicional por processo. 
+          </Typography>
+        </AccordionDetails>
+      </Accordion>
+      <Accordion>
+        <AccordionSummary
+          expandIcon={<ExpandMoreIcon />}
+          aria-controls="panel1a-content"
+          id="panel1a-header"
+        >
+          <Typography className={classes.heading}>Como faço para contratar o serviço e quais os métodos de pagamento?</Typography>
+        </AccordionSummary>
+        <AccordionDetails>
+          <Typography className={classes.content}>
+          Preencha seus dados em nosso <a href='http://datajus.site/cadastro' style={{textDecoration: 'none'}}><strong>Cadastro</strong></a>, nossa equipe entrará em contato com você requerendo os documentos necessários para o prosseguimento de sua defesa bem como a melhor forma de pagamento. Os pagamentos são feitos através do <strong>Mercado Pago</strong>, portanto, aceitamos todas as formas de pagamento da plataforma.
           </Typography>
         </AccordionDetails>
       </Accordion>
