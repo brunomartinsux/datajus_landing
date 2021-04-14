@@ -1,4 +1,5 @@
 import { React, useState} from 'react'
+const axios = require('axios')
 
 function RegisterForm(){
 
@@ -12,9 +13,22 @@ function RegisterForm(){
 
 function HandleSubmit() {
 
+    const Input0 = document.getElementsByClassName('profile-input').item(0)
+    const Input1 = document.getElementsByClassName('profile-input').item(1)
+    const Input2 = document.getElementsByClassName('profile-input').item(2)
+    const Input3 = document.getElementsByClassName('profile-input').item(3)
+
     if(name && email && phone && cnpj && document.getElementById('checkbox').checked === true) {
 
-        fetch('https://leads-lake.herokuapp.com/leads/', {
+        axios({
+            method: 'POST',
+            url: `https://apilayer.net/api/check?access_key=2940f4bdc3324af140db028708e890f1&email=${email}`
+        }).then(response => {
+
+            //VERIFICANDO EMAIL
+
+            if(response.format_valid && response.smtp_check){
+                fetch('https://leads-lake.herokuapp.com/leads/', {
         method: 'POST',
         headers: {
             Accept: 'application/json',
@@ -35,8 +49,39 @@ function HandleSubmit() {
             }
       
         });
+            } else {
+                window.alert("OPS! O Email informado é inválido...")
+            }
+        });
+        
     } else {
-        window.alert('Preencha todos os campos do formulário.')
+        if(name === ''){
+            Input0.className = 'profile-input shake-horizontal'
+            
+        }
+        if(phone === ''){
+            Input1.className = 'profile-input shake-horizontal'
+        }
+        if(email === ''){
+            Input2.className = 'profile-input shake-horizontal'
+        }
+        if(cnpj === ''){
+            Input3.className = 'profile-input shake-horizontal'
+        }
+        if(document.getElementById('checkbox').checked === false){
+            document.getElementById('checkbox').className = 'checkbox shake-horizontal'
+        }
+        
+        setTimeout(function(){
+            Input0.className = 'profile-input'
+            Input1.className = 'profile-input'
+            Input2.className = 'profile-input'
+            Input3.className = 'profile-input'
+            document.getElementById('checkbox').className = 'checkbox'
+
+        }, 1000)
+
+
     }
 }
 
