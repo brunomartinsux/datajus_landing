@@ -13,7 +13,7 @@ function DiscountForm(props) {
 
         
 
-        if(cnpj) {
+        if(cnpj && cnpj.length <= 10) {
 
             setSubmitText('Verificando CNPJ...')
 
