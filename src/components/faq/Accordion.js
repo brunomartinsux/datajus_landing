@@ -38,10 +38,8 @@ export default function SimpleAccordion() {
         </AccordionSummary>
         <AccordionDetails>
           <Typography className={classes.content}>
-          Cuidamos de todos os processos tributários da sua empresa. Os processos novos enquanto
-          ação tributária, estarão inclusos no Plano Mensal. Ainda, o acompanhamento
-          processual, com todos os produtos <strong>Datajus</strong>, fazem parte do Plano Mensal. Portanto, feito do início ao
-          fim sem taxas extra.
+          Ao contratar nossos serviços, nos comprometemos assessoria tributária de até 10 processos. Caso surjam novos processos,
+          será cobrado um plus adicional por processo. 
           </Typography>
         </AccordionDetails>
       </Accordion>
@@ -55,8 +53,7 @@ export default function SimpleAccordion() {
         </AccordionSummary>
         <AccordionDetails>
           <Typography className={classes.content}>
-          Trabalhamos com um contrato de prestação de serviço que pode ser cancelado a qualquer
-          momento, <strong>sem multa ou taxas</strong>  por quebra de contrato.
+          Trabalhamos com contrato de prestação de serviços. Em caso de cancelamento, a única exigência é o pagamento de uma mensalidade adicional, uma vez que em caso de renúncia de mandato, nossos profissionais por lei, o representarão por mais 10 dias úteis, <strong>conforme Lei 13.105/2015</strong>.
           </Typography>
         </AccordionDetails>
       </Accordion>
@@ -86,8 +83,7 @@ export default function SimpleAccordion() {
         </AccordionSummary>
         <AccordionDetails>
           <Typography className={classes.content}>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse malesuada lacus ex,
-            sit amet blandit leo lobortis eget.
+          Em caso de um dos sócios possuir outra empresa sofrendo execução fiscal, será adicionado um <strong>desconto na mensalidade</strong>, uma vez que trata de pessoas jurídicas distintas.
           </Typography>
         </AccordionDetails>
       </Accordion>
@@ -101,11 +97,31 @@ export default function SimpleAccordion() {
         </AccordionSummary>
         <AccordionDetails>
           <Typography className={classes.content}>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse malesuada lacus ex,
-            sit amet blandit leo lobortis eget.
+          A <strong>Datajus</strong> não se opõem em trabalhar em parceria com outros profissionais, porém é necessário que o contratante verifique com seus antigos consultores as cláusulas contratuais vigentes a eles.
           </Typography>
         </AccordionDetails>
       </Accordion>
+      <Accordion>
+        <AccordionSummary
+          expandIcon={<ExpandMoreIcon />}
+          aria-controls="panel2a-content"
+          id="panel2a-header"
+        >
+          <Typography className={classes.heading}> 
+          Como faço para tirar uma dúvida sobre o processo ou serviço 
+          sendo executado pela Datajus?
+          </Typography>
+        </AccordionSummary>
+        <AccordionDetails>
+          <Typography className={classes.content}>
+          A <strong>Datajus</strong> disponibiliza ferramentas e aplicativos para que seus clientes 
+          consigam elucidar qualquer questionamento referente ao seus processos diretamente 
+          com sua equipe jurídica. Em <strong>menos de 24 horas</strong> nossa equipe entrará em contato com a melhor 
+          orientação atinente ao caso.
+          </Typography>
+        </AccordionDetails>
+      </Accordion>
+
       
     </div>
   );

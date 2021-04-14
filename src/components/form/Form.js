@@ -1,6 +1,6 @@
 import { React, useState } from 'react'
 import './form.css'
-
+const axios = require('axios')
 
 function Form(){
 
@@ -14,8 +14,23 @@ const[formBtnText, setFormText] = useState('Enviar Formulário')
 
 function HandleSubmit() {
 
+    const Input0 = document.getElementsByClassName('profile-input').item(0)
+    const Input1 = document.getElementsByClassName('profile-input').item(1)
+    const Input2 = document.getElementsByClassName('profile-input').item(2)
+
+
     if(name && phone && email){
-        fetch('https://leads-lake.herokuapp.com/leads/', {
+
+        // VERIFICANDO EMAIL COM MAILBOXLAYER.COM
+        axios({
+            method: 'POST',
+            url: `https://apilayer.net/api/check?access_key=2940f4bdc3324af140db028708e890f1&email=${email}`
+        }).then(response => {
+            
+            // VERIFICANDO SE O EMAIL É VALIDO
+
+            if(response.format_valid && response.smtp_check){
+                fetch('https://leads-lake.herokuapp.com/leads/', {
             method: 'POST',
             headers: {
               Accept: 'application/json',
@@ -38,8 +53,30 @@ function HandleSubmit() {
             setName('')
             setPhone('')
             setEmail('')
+            } else {
+                window.alert('OPS! Email inválido :(')
+            }
+        })
+        
     } else {
-        window.alert('Preencha todos os campos do formulário corretamente.')
+        if(name === ''){
+            Input0.className = 'profile-input shake-horizontal'
+            
+        }
+        if(phone === ''){
+            Input1.className = 'profile-input shake-horizontal'
+        }
+        if(email === ''){
+            Input2.className = 'profile-input shake-horizontal'
+        }
+        
+        setTimeout(function(){
+            Input0.className = 'profile-input'
+            Input1.className = 'profile-input'
+            Input2.className = 'profile-input'
+        }, 1000)
+
+
     }
     
 
