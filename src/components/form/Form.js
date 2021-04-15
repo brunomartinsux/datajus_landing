@@ -20,7 +20,7 @@ function HandleSubmit() {
 
 
     if(name && phone && email){
-
+        setFormText('Enviando...')
         // VERIFICANDO EMAIL COM MAILBOXLAYER.COM
         axios({
             method: 'POST',
@@ -43,7 +43,6 @@ function HandleSubmit() {
                     lead_type: "lead-capture-form"
             })
           }).then(response => {
-            setFormText('Enviando...')
             console.log(response)
               if(response.status === 201) {
                 setSent(true);
