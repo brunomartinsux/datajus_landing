@@ -97,7 +97,7 @@ export default function SimpleAccordion() {
         </AccordionSummary>
         <AccordionDetails>
           <Typography className={classes.content}>
-          Em caso de um dos sócios possuir outra empresa sofrendo execução fiscal, será adicionado um <strong>desconto na mensalidade</strong>, uma vez que trata de pessoas jurídicas distintas.
+          Lembrando que todas as empresas podem tentar um <a href='http://datajus.site/desconto' style={{textDecoration: 'none'}}><strong>Desconto de 30%</strong></a> até o dia 07/05. No caso de 2 empresas ou mais, será adicionado um desconto exponencial na mensalidade dos outros CNPJ's. 
           </Typography>
         </AccordionDetails>
       </Accordion>

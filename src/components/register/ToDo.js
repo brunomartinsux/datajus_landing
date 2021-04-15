@@ -1,7 +1,8 @@
 import React from 'react'
-import IconActivity from '../../Icons/activity'
-import IconCheckSquare from '../../Icons/check-square'
-import IconUsers from '../../Icons/users'
+import IconNote from '../../Icons/note'
+import IconPencil from '../../Icons/pencil'
+import IconPlane from '../../Icons/paperplane'
+import IconSearch from '../../Icons/search'
 
 function ToDo(){
 
@@ -9,31 +10,31 @@ function ToDo(){
         <div className='todo-container'>
             <div className='todo-content-container scale-up-center'>
                 <div className='todo-item'>
-                    <IconActivity/>
+                    <IconPencil/>
                     <div className='todo-item-content'>
                         <h1>PASSO 1</h1>
-                        <p>Lorem ipsum dolom sit amet, consectur adisciping elit.</p>
+                        <p>Recebemos seu cadastro, preenchido no formulário ao lado.</p>
                     </div>
                 </div>
                 <div className='todo-item'>
-                    <IconUsers/>
+                    <IconSearch/>
                     <div className='todo-item-content'>
                         <h1>PASSO 2</h1>
-                        <p>Lorem ipsum dolom sit amet, consectur adisciping elit.</p>
+                        <p>Validamos seu CNPJ e encaminhamos à um atendente.</p>
                     </div>
                 </div>
                 <div className='todo-item'>
-                    <IconCheckSquare />
+                    <IconPlane />
                     <div className='todo-item-content'>
                         <h1>PASSO 3</h1>
-                        <p>Lorem ipsum dolom sit amet, consectur adisciping elit.</p>
+                        <p>Enviamos um email com +info passos e docs </p>
                     </div>
                 </div>
                 <div className='todo-item'>
-                    <IconActivity/>
+                    <IconNote/>
                     <div className='todo-item-content'>
                         <h1>PASSO 4</h1>
-                        <p>Lorem ipsum dolom sit amet, consectur adisciping elit.</p>
+                        <p>Basta finalizar o pagamento e já será um cliente <strong style={{fontFamily:'Yellowtail', fontWeight:'300', fontSize:'19px'}}>Datajus</strong>.</p>
                     </div>
                 </div>
             </div>
