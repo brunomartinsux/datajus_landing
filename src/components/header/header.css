@@ -62,7 +62,7 @@
     align-items: center;
     width: 40%;
     font-weight: bold;
-    font-size:22px;
+    font-size:20px;
 }
 
 .Nav {
@@ -74,7 +74,7 @@
     height:80%;
     margin: 10% 0;
     font-weight: bold;
-    font-size:22px;
+    font-size:20px;
 }
 
 .Hamburguer{
@@ -84,13 +84,13 @@
 h3 { 
     color: #FCFCFC;
     text-decoration: inherit;
-    font-size: 24px;
+    font-size: 20px;
 }
 
 
 .NavMenu :hover {
     cursor: pointer;
-    font-size:23px;
+    font-size:21px;
 }
 
 
