@@ -8,15 +8,23 @@ function DiscountForm(props) {
 
     const [cnpj,setCnpj] = useState('')
     const [submitText, setSubmitText] = useState('Resgatar Desconto')
+    const cnpjInput = document.getElementById('cnpjInput')
+    const cnpjBtn = document.getElementsByClassName('dicount-btn')[0]
 
     async function handleSubmit(){
 
         
 
-        if(cnpj && cnpj.length <= 10) {
+        if(cnpj) {
 
-            setSubmitText('Verificando CNPJ...')
-
+            cnpjBtn.className = 'dicount-btn text-focus-in'
+            setSubmitText('Verificando CNPJ')
+            setTimeout(function(){
+                setSubmitText('Validando Desconto')
+            }, 2000)
+            setTimeout(function(){
+                setSubmitText('Gerando Token')
+            }, 4000)
             const consultaLead = await axios({
                 method: 'get',
                 url: `https://leads-lake.herokuapp.com/leads/${cnpj}`
@@ -70,7 +78,10 @@ function DiscountForm(props) {
             }   
             }
         } else {
-            window.alert('Preencher o CNPJ corretamente.')
+            cnpjInput.className = 'profile-input shake-horizontal'
+            setTimeout(function(){
+                cnpjInput.className = 'profile-input'
+            },1000)
         }
         
         
@@ -82,7 +93,7 @@ function DiscountForm(props) {
                 <h1 className="discount-title">GANHE ATÉ <strong>30% DE DESCONTO</strong> NAS SUAS MENSALIDADES.</h1>
                 <p>Informe seu CNPJ abaixo para calcularmos seu desconto:</p>
                 <label>CNPJ</label>
-                <input className="profile-input" placeholder="XX.XXX.XXX/0001-XX"
+                <input className="profile-input" id="cnpjInput" placeholder="XX.XXX.XXX/0001-XX"
                 type="text"
                 data-mask="00.000.000/0000-00"
                 required
