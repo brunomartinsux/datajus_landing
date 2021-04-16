@@ -89,7 +89,7 @@
 
 .btn-hire {
     align-self: center;
-    max-height: 50px;
+    min-height: 50px;
     cursor: pointer;
     width: 90%;
     margin: 0% 5%;

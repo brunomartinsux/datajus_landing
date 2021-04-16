@@ -14,7 +14,7 @@ function NavMenu (props){
 
     return (
         <div className='NavBarMenu scale-in-ver-top'  >
-            <div className='Nav ' id="nav-menu">
+            <div className='Nav' id="nav-menu">
             <Link
                 activeClass="active"
                 to="prd-container"

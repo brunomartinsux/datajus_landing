@@ -3,7 +3,6 @@
     display: flex;
     flex-direction: row;
     justify-content: space-around;
-    align-items: center;
     width: 100%;
     background-color: #24292E;
     color: #FCFCFC;
@@ -12,15 +11,15 @@
 
 .HeadContainer h1 {
     font-family: Yellowtail;
-font-style: normal;
-font-weight: normal;
-font-size: 34px;
-line-height: 0px;
-padding: 0.5%;
-/* identical to box height, or 0% */
+    font-style: normal;
+    font-weight: normal;
+    font-size: 34px;
+    line-height: 0px;
+    padding: 1%;
+    /* identical to box height, or 0% */
 
 
-color: #FFFFFF;
+    color: #FFFFFF;
 
 }
 
@@ -42,7 +41,7 @@ color: #FFFFFF;
   }
   
 
-.NavBarMenu {
+  .NavBarMenu {
     position: fixed;
     display: flex;
     flex-direction: row;
@@ -55,21 +54,21 @@ color: #FFFFFF;
     z-index: 800;
 }
 
+
 .NavMenu {
     display: flex;
     flex-direction: row;
-    justify-content: space-evenly;
+    justify-content: space-between;
     align-items: center;
     width: 40%;
-    padding-left: 5%;
     font-weight: bold;
-    font-size:20px;
+    font-size:22px;
 }
 
 .Nav {
     display: flex;
     flex-direction: column;
-    justify-content: space-evenly;
+    justify-content: space-between;
     align-items: center;
     width: 100%;
     height:80%;

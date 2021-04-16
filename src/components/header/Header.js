@@ -16,7 +16,7 @@ function Header (){
 
     return (
         <div className='HeadContainer' >
-            <h1 id={'logo'} href="#">Datajus</h1 >
+            <h1>Datajus</h1 >
             <div className='NavMenu' id="nav-menu">
             <Link
                 activeClass="active"
