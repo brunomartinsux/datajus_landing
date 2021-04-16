@@ -8,11 +8,9 @@ function DiscountForm(props) {
 
     const [cnpj,setCnpj] = useState('')
     const [submitText, setSubmitText] = useState('Resgatar Desconto')
-    const cnpjInput = document.getElementsByClassName('profile-input')[0]
     const cnpjBtn = document.getElementsByClassName('dicount-btn')[0]
 
     async function handleSubmit(){
-
         
 
         if(cnpj) {
@@ -78,9 +76,9 @@ function DiscountForm(props) {
             }   
             }
         } else {
-            cnpjInput.className = 'profile-input shake-horizontal'
+            document.getElementsByClassName('profile-input')[0].className = 'profile-input shake-horizontal'
             setTimeout(function(){
-                cnpjInput.className = 'profile-input'
+                document.getElementsByClassName('profile-input')[0].className = 'profile-input'
             },1000)
         }
         
