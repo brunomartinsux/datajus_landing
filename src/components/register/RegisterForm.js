@@ -92,10 +92,10 @@ function HandleSubmit() {
             <div className='register-content-container scale-up-center'>
                 <h1>FORMULÁRIO DE CADASTRO</h1>
                 <p>Preencha todas as informações abaixo:</p>
-                <label className="name-label">Nome Completo</label>
+                <label className="name-label">Nome Completo / Razão Social</label>
             <input
                 className="profile-input"
-                placeholder="     Nome completo"
+                placeholder="     Nome completo ou Razão Social"
                 type="text"
                 required
                 value={name}
@@ -122,7 +122,7 @@ function HandleSubmit() {
             <label className="name-label">CPF OU CNPJ</label>
             <input
                 className="profile-input"
-                placeholder="     000.000.000/0001-00"
+                placeholder="     XXX.XXX.XXX/XXX1-XX"
                 type="text"
                 required
                 value={cnpj}

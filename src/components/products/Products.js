@@ -15,7 +15,7 @@ function Products () {
             <div id="prd-container" className="prd-container">
                 <div className="prd-list">
                     <ProductCard title={JSON.produto1.titulo} subtitle={JSON.produto1.subtitulo}>
-                        <IconUsers/>
+                        <IconUsers />
                     </ProductCard>
                     <ProductCard title={JSON.produto2.titulo} subtitle={JSON.produto2.subtitulo}>
                         <IconActivity/>

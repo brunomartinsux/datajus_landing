@@ -10,6 +10,7 @@ const useStyles = makeStyles((theme) => ({
   root: {
     margin:'0 10%',
     width: '80%',
+    textAlign: 'left',
   },
   heading: {
     fontSize: theme.typography.pxToRem(20),
@@ -25,14 +26,20 @@ const useStyles = makeStyles((theme) => ({
 
 export default function SimpleAccordion() {
   const classes = useStyles();
+  const [expanded, setExpanded] = React.useState(false);
+
+  const handleChange = (panel) => (event, isExpanded) => {
+    setExpanded(isExpanded ? panel : false);
+  };
 
   return (
     <div className={classes.root}>
-      <Accordion>
+      <Accordion expanded={expanded === 'panel1'} onChange={handleChange('panel1')}>
         <AccordionSummary
           expandIcon={<ExpandMoreIcon />}
           aria-controls="panel1a-content"
           id="panel1a-header"
+          
         >
           <Typography className={classes.heading}>Processos novos estarão inclusos no acompanhamento? Algum valor a mais?</Typography>
         </AccordionSummary>
@@ -43,7 +50,7 @@ export default function SimpleAccordion() {
           </Typography>
         </AccordionDetails>
       </Accordion>
-      <Accordion>
+      <Accordion expanded={expanded === 'panel2'} onChange={handleChange('panel2')}> 
         <AccordionSummary
           expandIcon={<ExpandMoreIcon />}
           aria-controls="panel1a-content"
@@ -57,7 +64,7 @@ export default function SimpleAccordion() {
           </Typography>
         </AccordionDetails>
       </Accordion>
-      <Accordion>
+      <Accordion expanded={expanded === 'panel3'} onChange={handleChange('panel3')}>
         <AccordionSummary
           expandIcon={<ExpandMoreIcon />}
           aria-controls="panel2a-content"
@@ -71,7 +78,7 @@ export default function SimpleAccordion() {
           </Typography>
         </AccordionDetails>
       </Accordion>
-      <Accordion>
+      <Accordion expanded={expanded === 'panel4'} onChange={handleChange('panel4')}>
         <AccordionSummary
           expandIcon={<ExpandMoreIcon />}
           aria-controls="panel2a-content"
@@ -87,7 +94,7 @@ export default function SimpleAccordion() {
           </Typography>
         </AccordionDetails>
       </Accordion>
-      <Accordion>
+      <Accordion expanded={expanded === 'panel5'} onChange={handleChange('panel5')}>
         <AccordionSummary
           expandIcon={<ExpandMoreIcon />}
           aria-controls="panel2a-content"
@@ -101,7 +108,7 @@ export default function SimpleAccordion() {
           </Typography>
         </AccordionDetails>
       </Accordion>
-      <Accordion>
+      <Accordion expanded={expanded === 'panel6'} onChange={handleChange('panel6')}>
         <AccordionSummary
           expandIcon={<ExpandMoreIcon />}
           aria-controls="panel2a-content"
@@ -115,7 +122,7 @@ export default function SimpleAccordion() {
           </Typography>
         </AccordionDetails>
       </Accordion>
-      <Accordion>
+      <Accordion expanded={expanded === 'panel7'} onChange={handleChange('panel7')}>
         <AccordionSummary
           expandIcon={<ExpandMoreIcon />}
           aria-controls="panel2a-content"

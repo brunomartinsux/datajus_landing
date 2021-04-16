@@ -52,7 +52,7 @@ function Header (){
             >FAQ</Link>
             </div>
             <button className="header-btn" onClick={() => window.open('https://api.whatsapp.com/send?phone=5547997086040&text=Ol%C3%A1%2C%20vim%20do%20site%20da%20Datajus.%20Gostaria%20de%20saber%20mais%20sobre%20o%20Servi%C3%A7o!')}
-            >   <IconWhatsapp color={"#f2f2f2"}/>
+            >   <IconWhatsapp color={"#f2f2f2"} height={"20px"} width={'20px'}/>
                  Fale Conosco
             </button>
             <div className="Hamburguer">

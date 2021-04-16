@@ -44,7 +44,7 @@ function Footer() {
             >FAQ</Link>
             </div>
             <div className="media-footer">
-                <IconWhatsapp color={"#ffffff"}/>
+                <IconWhatsapp color={"#ffffff"} height={'32px'} width={'32px'} />
                 <IconInstagram color={"#ffffff"}/>
                 <IconFacebook color={"#ffffff"}/>
             </div>
