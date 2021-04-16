@@ -20,6 +20,7 @@ function App() {
         <Route exact path="/" component={Homepage} />
         <Route exact path="/desconto" component={Discount} />
         <Route exact path="/cadastro" component={Register} />
+        <Route exact path="/cadastro/:partnerName" component={Register} />
         <Route exact path="/confirmacao" component={ConfirmEmail} />
         </Switch>
       </Router>
