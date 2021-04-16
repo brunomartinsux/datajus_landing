@@ -8,7 +8,7 @@ function DiscountForm(props) {
 
     const [cnpj,setCnpj] = useState('')
     const [submitText, setSubmitText] = useState('Resgatar Desconto')
-    const cnpjInput = document.getElementById('cnpjInput')
+    const cnpjInput = document.getElementsByClassName('profile-input')[0]
     const cnpjBtn = document.getElementsByClassName('dicount-btn')[0]
 
     async function handleSubmit(){
@@ -93,7 +93,7 @@ function DiscountForm(props) {
                 <h1 className="discount-title">GANHE ATÉ <strong>30% DE DESCONTO</strong> NAS SUAS MENSALIDADES.</h1>
                 <p>Informe seu CNPJ abaixo para calcularmos seu desconto:</p>
                 <label>CNPJ</label>
-                <input className="profile-input" id="cnpjInput" placeholder="XX.XXX.XXX/0001-XX"
+                <input className="profile-input" placeholder="XX.XXX.XXX/0001-XX"
                 type="text"
                 data-mask="00.000.000/0000-00"
                 required
