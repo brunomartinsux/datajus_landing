@@ -1,6 +1,6 @@
  const JSON = {
     "produto1":{
-        "titulo":"Consultoria Tributária",
+        "titulo":"Recuperação Fiscal",
         "subtitulo":"A Datajus é formada por um time de tecnologia e advogados especialistas em ações fiscais, todos focados em realizar um atendimento personalizado, acertivo e transparente."
     },
     "produto2":{
